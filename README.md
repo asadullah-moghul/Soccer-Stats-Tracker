@@ -15,4 +15,3 @@ Tech Stack: Java
 * Libraries: BufferedReader, FileWriter, Math, Swing, java.time, draw.io  
 * Data: stored as CSV  
 * Dev Tools: JUnit, GitHub, Visual Studio Code
-
