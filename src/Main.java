@@ -17,6 +17,12 @@ public class Main {
                 System.out.println(match);
             }
             System.out.println();
+            for (String name : StatsCalculator.playerNames(matches)) {
+                ArrayList<Match> playerMatches = StatsCalculator.matchesForPlayer(matches, name);
+                String summary = StatsCalculator.summarize(name, playerMatches);
+                System.out.println(summary);
+            }
+            System.out.println();
         } catch (IOException e) {
             System.out.println("Error loading match data: " + e.getMessage());
         }

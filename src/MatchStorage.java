@@ -40,6 +40,7 @@ public class MatchStorage {
     }
 
     public void saveMatches(ArrayList<Match> matches) throws IOException {
+        File parentDir = csvFile.getParentFile();
         if (parentDir != null) {
             parentDir.mkdirs();
         }
