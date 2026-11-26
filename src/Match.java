@@ -70,6 +70,6 @@ public class Match {
 
     @Override
     public String toString() {
-        return String.format(date + " - " + playerName + " vs " + opponent + ": " + minutesPlayed + " mins, " + goals + " goals, " + assists + " assists");
+        return date + " - " + playerName + " vs " + opponent + ": " + minutesPlayed + " mins, " + goals + " goals, " + assists + " assists";
     }
 }

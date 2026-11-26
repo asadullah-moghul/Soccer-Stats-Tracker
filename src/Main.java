@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.io.IOException;
 
@@ -17,8 +16,9 @@ public class Main {
             for (Match match : matches) {
                 System.out.println(match);
             }
+            System.out.println();
         } catch (IOException e) {
-            System.err.println("Error loading match data: " + e.getMessage());
+            System.out.println("Error loading match data: " + e.getMessage());
         }
     }
 }

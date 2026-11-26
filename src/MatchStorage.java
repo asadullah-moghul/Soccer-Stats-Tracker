@@ -8,7 +8,7 @@ import java.io.FileWriter;
 
 public class MatchStorage {
     private final File csvFile;
-    private static final String CSV_HEADER = "Date,Player Name,Opponent,Minutes Played,Goals,Assists";
+    private static final String CSV_HEADER = "date,player name,opponent,minutes played,goals,assists";
 
     public MatchStorage(String csvPath) {
         this.csvFile = new File(csvPath);
@@ -40,6 +40,9 @@ public class MatchStorage {
     }
 
     public void saveMatches(ArrayList<Match> matches) throws IOException {
+        if (parentDir != null) {
+            parentDir.mkdirs();
+        }
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(csvFile))) {
             bw.write(CSV_HEADER);
             bw.newLine();
