@@ -23,7 +23,7 @@ public class Match {
     public static Match fromCSV(String line) {
         String[] parts = line.split(",", -1);
         if (parts.length != CSV_COLUMN_COUNT) {
-            throw new IllegalArgumentException("Invalid data format: " + e.getMessage());
+            throw new IllegalArgumentException("Invalid data format: " + line);
         }
 
         try {
@@ -38,6 +38,10 @@ public class Match {
         } catch (DateTimeParseException | NumberFormatException e) {
             throw new IllegalArgumentException("Invalid data format: " + e.getMessage());
         }
+    }
+
+    public String toCSV() {
+        return String.join(",", date.toString(), playerName, opponent, String.valueOf(minutesPlayed), String.valueOf(goals), String.valueOf(assists));
     }
 
     public LocalDate getDate() {

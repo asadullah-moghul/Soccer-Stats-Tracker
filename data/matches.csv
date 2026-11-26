@@ -1,4 +1,4 @@
-date,player,opponent,minutes,goals,assists
+Date,Player Name,Opponent,Minutes Played,Goals,Assists
 2026-09-06,Jordan Hayes,Riverside FC,90,2,0
 2026-09-06,Sam Ortiz,Riverside FC,75,0,1
 2026-09-13,Jordan Hayes,Lakeview United,90,1,1
@@ -7,3 +7,4 @@ date,player,opponent,minutes,goals,assists
 2026-09-20,Sam Ortiz,Hillcrest SC,30,0,0
 2026-09-27,Jordan Hayes,Northgate Athletic,90,3,0
 2026-09-27,Sam Ortiz,Northgate Athletic,90,0,2
+2026-10-04,Jordan Hayes,Eastside FC,90,1,1

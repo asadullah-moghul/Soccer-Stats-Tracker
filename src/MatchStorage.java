@@ -3,9 +3,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class MatchStorage {
     private final File csvFile;
+    private static final String CSV_HEADER = "Date,Player Name,Opponent,Minutes Played,Goals,Assists";
 
     public MatchStorage(String csvPath) {
         this.csvFile = new File(csvPath);
@@ -34,5 +37,16 @@ public class MatchStorage {
             }
         }
         return matches;
+    }
+
+    public void saveMatches(ArrayList<Match> matches) throws IOException {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(csvFile))) {
+            bw.write(CSV_HEADER);
+            bw.newLine();
+            for (Match match : matches) {
+                bw.write(match.toCSV());
+                bw.newLine();
+            }
+        }
     }
 }
