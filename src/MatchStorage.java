@@ -13,6 +13,11 @@ public class MatchStorage {
 
     public ArrayList<Match> loadMatches() throws IOException {
         ArrayList<Match> matches = new ArrayList<>();
+
+        if (!csvFile.exists()) {
+            return matches;
+        }
+
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
             br.readLine(); // Skip header line
             String line;

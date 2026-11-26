@@ -23,7 +23,7 @@ public class Match {
     public static Match fromCSV(String line) {
         String[] parts = line.split(",", -1);
         if (parts.length != CSV_COLUMN_COUNT) {
-            throw new IllegalArgumentException("Invalid CSV format");
+            throw new IllegalArgumentException("Invalid data format: " + e.getMessage());
         }
 
         try {
